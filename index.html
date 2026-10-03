@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Ghanaian diversified business enterprise based in Kasoa, Ghana. Real estate, construction, travel &amp; tourism, import &amp; export, investment facilitation, recruitment, automotive services and general trading." />
-  <meta name="theme-color" content="#0d1b2a" />
+  <meta name="theme-color" content="#0B1B33" />
   <title>Besago Ventures — Connecting Business, Investment &amp; Opportunities</title>
 
   <!-- Open Graph / Twitter -->
@@ -20,22 +20,142 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script>document.documentElement.classList.add("js");</script>
-  <!-- Favicon placeholder: replace with /favicon.ico or an SVG favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d1b2a'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23d4a24c' font-family='Georgia'>B</text></svg>" />
+  <!-- Favicon: gold "B" monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230B1B33'/><rect x='4.5' y='4.5' width='55' height='55' rx='10' fill='none' stroke='%23C9A24B' stroke-width='2'/><text x='32' y='45' font-size='36' font-family='Georgia,serif' font-weight='bold' text-anchor='middle' fill='%23C9A24B'>B</text></svg>" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Besago Ventures",
+    "slogan": "Connecting Business, Investment & Opportunities",
+    "email": "besagoventures@gmail.com",
+    "telephone": "+233594472033",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kasoa",
+      "addressRegion": "Central Region",
+      "addressCountry": "GH"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Shared SVG definitions: pattern, monogram, icons ===== -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Original abstract African-inspired geometric pattern -->
+      <pattern id="besago-pattern" width="64" height="64" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="#C9A24B" stroke-width="1.25">
+          <path d="M32 6 58 32 32 58 6 32Z" />
+          <path d="M32 20 44 32 32 44 20 32Z" stroke-width="1" />
+          <path d="M0 0l8 8M64 0l-8 8M0 64l8-8M64 64l-8-8" stroke-width="1" />
+          <path d="M32 0v6M32 58v6M0 32h6M58 32h6" stroke-width="1" />
+        </g>
+        <g fill="#C9A24B">
+          <circle cx="32" cy="32" r="2" />
+          <circle cx="0" cy="32" r="1.7" />
+          <circle cx="64" cy="32" r="1.7" />
+          <circle cx="32" cy="0" r="1.7" />
+          <circle cx="32" cy="64" r="1.7" />
+        </g>
+      </pattern>
+
+      <!-- Monogram -->
+      <symbol id="i-monogram" viewBox="0 0 44 44">
+        <rect x="1" y="1" width="42" height="42" rx="12" fill="rgba(201,162,75,0.12)" stroke="#C9A24B" stroke-width="1.6" />
+        <text x="22" y="30.5" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="25" fill="#C9A24B">B</text>
+      </symbol>
+
+      <!-- Division / service icons -->
+      <symbol id="i-realestate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 10.8 12 3.2l9 7.6" />
+        <path d="M5.2 9.6V20.8h13.6V9.6" />
+        <path d="M9.6 20.8v-5.6h4.8v5.6" />
+      </symbol>
+      <symbol id="i-construction" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 21h16" />
+        <path d="M8 21V5" />
+        <path d="M8 5h10" />
+        <path d="M15 5v5" />
+        <rect x="13.5" y="10" width="3" height="2.6" rx="0.5" />
+      </symbol>
+      <symbol id="i-travel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9" />
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+      </symbol>
+      <symbol id="i-importexport" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 20V5" />
+        <path d="M3.5 8.5 7 5l3.5 3.5" />
+        <path d="M17 4v15" />
+        <path d="M13.5 15.5 17 19l3.5-3.5" />
+      </symbol>
+      <symbol id="i-investment" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+        <polyline points="17 6 23 6 23 12" />
+      </symbol>
+      <symbol id="i-recruitment" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </symbol>
+      <symbol id="i-automotive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.7" y="10" width="18.6" height="5.6" rx="1.8" />
+        <path d="M6.5 10l1.5-3.4a1.8 1.8 0 0 1 1.7-1.1h4.6a1.8 1.8 0 0 1 1.7 1.1L17.5 10" />
+        <circle cx="7.5" cy="17.4" r="1.7" />
+        <circle cx="16.5" cy="17.4" r="1.7" />
+      </symbol>
+      <symbol id="i-trading" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+        <path d="M3 6h18" />
+        <path d="M16 10a4 4 0 0 1-8 0" />
+      </symbol>
+
+      <!-- UI + contact icons -->
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+        <path d="m3.8 7.4 7.3 5.1a2 2 0 0 0 2.2 0l7.3-5.1" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+        <circle cx="12" cy="13" r="4" />
+      </symbol>
+      <symbol id="i-arrowup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5" />
+        <path d="m5 12 7-7 7 7" />
+      </symbol>
+      <symbol id="i-arrowdown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14" />
+        <path d="m19 12-7 7-7-7" />
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- ===== Header ===== -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="#top" class="logo" aria-label="Besago Ventures home">
-        <!-- LOGO PLACEHOLDER: replace assets/logo.svg with the real logo -->
-        <span class="logo-mark">
-          <img src="assets/logo.svg" alt="" title="Logo placeholder" width="38" height="38" />
+      <a href="#top" class="logo" aria-label="Besago Ventures — home">
+        <svg class="logo-mark" viewBox="0 0 44 44" aria-hidden="true"><use href="#i-monogram" /></svg>
+        <span class="logo-text">
+          <span class="logo-primary">BESAGO</span>
+          <span class="logo-secondary">VENTURES</span>
         </span>
-        <span class="logo-text">Besago <em>Ventures</em></span>
       </a>
 
       <nav class="site-nav" id="site-nav" aria-label="Primary">
@@ -43,7 +163,7 @@
         <a href="#services">What We Do</a>
         <a href="#partnership">Partnership</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-small">Partner With Us</a>
+        <a href="#contact" class="btn btn-gold btn-small">Partner With Us</a>
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
@@ -52,44 +172,78 @@
     </div>
   </header>
 
-  <main>
-    <!-- ===== 1. Hero ===== -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow reveal">Kasoa &middot; Central Region &middot; Ghana</p>
-        <h1 class="reveal">Connecting Business,<br />Investment &amp; <span class="accent">Opportunities</span></h1>
-        <p class="lead reveal">
-          Besago Ventures is a Ghanaian diversified business enterprise based in
-          Kasoa, Central Region, Ghana — facilitating trade, investment, property
-          development, workforce opportunities and cross-border business relationships.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Chat on WhatsApp</a>
-          <a href="#contact" class="btn btn-ghost">Partner With Us</a>
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-gradient"></div>
+        <svg class="pattern-layer"><rect width="100%" height="100%" fill="url(#besago-pattern)" /></svg>
+        <span class="hero-glow"></span>
+        <span class="shape shape-ring" data-parallax="0.10"></span>
+        <span class="shape shape-dots" data-parallax="0.16"></span>
+        <span class="shape shape-block" data-parallax="0.07"></span>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-eyebrow reveal">Kasoa &middot; Central Region &middot; Ghana</p>
+          <h1 class="reveal">Connecting Business,<br />Investment &amp; <span class="accent">Opportunities</span></h1>
+          <p class="hero-lead reveal">
+            Besago Ventures is a Ghanaian diversified business enterprise based in
+            Kasoa, Central Region, Ghana — facilitating trade, investment, property
+            development, workforce opportunities and cross-border business relationships.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Chat on WhatsApp</a>
+            <a href="#contact" class="btn btn-outline">Partner With Us</a>
+          </div>
         </div>
 
-        <!-- PHOTO PLACEHOLDER: replace with a hero image (1600 × 600) -->
-        <div class="photo-placeholder hero-photo reveal" role="img" aria-label="Photo placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-            <circle cx="12" cy="13" r="4" />
-          </svg>
-          <p class="ph-label">Photo placeholder</p>
-          <p class="ph-hint">Replace with a company or project photo (1600 × 600)</p>
+        <div class="hero-panel reveal" aria-hidden="true">
+          <span class="panel-halo"></span>
+          <div class="panel-tiles">
+            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-realestate" /></svg></span>
+            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-construction" /></svg></span>
+            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-travel" /></svg></span>
+            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-importexport" /></svg></span>
+            <span class="panel-center"><svg class="logo-mark" viewBox="0 0 44 44"><use href="#i-monogram" /></svg></span>
+            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-investment" /></svg></span>
+            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-recruitment" /></svg></span>
+            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-automotive" /></svg></span>
+            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-trading" /></svg></span>
+          </div>
         </div>
       </div>
-      <div class="hero-glow" aria-hidden="true"></div>
+
+      <a class="hero-cue" href="#divisions" aria-label="Scroll to divisions"><span></span></a>
     </section>
 
-    <!-- ===== 2. About ===== -->
-    <section class="section" id="about">
+    <!-- ===== Divisions quick-nav ===== -->
+    <nav class="divisions" id="divisions" aria-label="Divisions">
       <div class="container">
-        <div class="split">
-          <div class="split-lead reveal">
+        <p class="divisions-label">Divisions</p>
+        <ul class="division-chips">
+          <li><a href="#svc-01"><svg viewBox="0 0 24 24"><use href="#i-realestate" /></svg><span>Real Estate</span></a></li>
+          <li><a href="#svc-02"><svg viewBox="0 0 24 24"><use href="#i-construction" /></svg><span>Construction</span></a></li>
+          <li><a href="#svc-03"><svg viewBox="0 0 24 24"><use href="#i-travel" /></svg><span>Travel &amp; Tourism</span></a></li>
+          <li><a href="#svc-04"><svg viewBox="0 0 24 24"><use href="#i-importexport" /></svg><span>Import &amp; Export</span></a></li>
+          <li><a href="#svc-05"><svg viewBox="0 0 24 24"><use href="#i-investment" /></svg><span>Investment &amp; Business</span></a></li>
+          <li><a href="#svc-06"><svg viewBox="0 0 24 24"><use href="#i-recruitment" /></svg><span>Recruitment</span></a></li>
+          <li><a href="#svc-07"><svg viewBox="0 0 24 24"><use href="#i-automotive" /></svg><span>Automotive</span></a></li>
+          <li><a href="#svc-08"><svg viewBox="0 0 24 24"><use href="#i-trading" /></svg><span>General Trading</span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== About ===== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-lead reveal">
             <p class="eyebrow">About us</p>
             <h2>A diversified Ghanaian business enterprise.</h2>
           </div>
-          <div class="split-body reveal">
+          <div class="about-body reveal">
             <p>
               Besago Ventures is a Ghanaian diversified business enterprise engaged
               in real estate, construction, travel and tourism, import and export,
@@ -102,16 +256,6 @@
               development, workforce opportunities and cross-border business
               relationships.
             </p>
-
-            <!-- PHOTO PLACEHOLDER: replace with a company, office or project photo -->
-            <div class="photo-placeholder" role="img" aria-label="Photo placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                <circle cx="12" cy="13" r="4" />
-              </svg>
-              <p class="ph-label">Photo placeholder</p>
-              <p class="ph-hint">Replace with a company, office or project photo</p>
-            </div>
           </div>
         </div>
 
@@ -124,16 +268,27 @@
             <p class="vm-label">Mission</p>
             <p class="vm-quote">&ldquo;To create sustainable economic opportunities through strategic partnerships, responsible investment, quality services, international trade and business development.&rdquo;</p>
           </div>
-          <div class="vm-card reveal">
+        </div>
+
+        <!-- CEO card -->
+        <div class="ceo-card reveal">
+          <div class="ceo-portrait" role="img" aria-label="Portrait placeholder for the CEO">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera" /></svg>
+            <span class="portrait-label">Portrait<br />placeholder</span>
+          </div>
+          <div class="ceo-content">
             <p class="vm-label">CEO</p>
             <p class="ceo-name">Apostle Dr. Benedict Owusu</p>
+            <div class="ceo-message">
+              <p class="message-label">Message from the CEO <span class="placeholder-badge">Placeholder</span></p>
+              <p class="message-text">Placeholder — a short message from the CEO will appear here. No content has been provided yet.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ===== 3. What We Do ===== -->
-    <section class="section section-alt" id="services">
+    <!-- ===== What We Do ===== -->
+    <section class="section services" id="services">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Our services</p>
@@ -141,15 +296,10 @@
           <p class="section-sub">From real estate and construction to trade, investment and workforce mobility.</p>
         </div>
 
-        <div class="card-grid services-grid">
-          <article class="card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M3 10.8 12 3.2l9 7.6" />
-                <path d="M5.2 9.6V20.8h13.6V9.6" />
-                <path d="M9.6 20.8v-5.6h4.8v5.6" />
-              </svg>
-            </div>
+        <div class="card-grid">
+          <article class="card reveal" id="svc-01">
+            <span class="card-num">01</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-realestate" /></svg></div>
             <h3>Real Estate Development &amp; Property Management</h3>
             <ul class="card-list">
               <li>property development and investment</li>
@@ -159,16 +309,9 @@
             </ul>
           </article>
 
-          <article class="card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 21h16" />
-                <path d="M8 21V5" />
-                <path d="M8 5h10" />
-                <path d="M15 5v5" />
-                <rect x="13.5" y="10" width="3" height="2.6" rx="0.5" />
-              </svg>
-            </div>
+          <article class="card reveal" id="svc-02">
+            <span class="card-num">02</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-construction" /></svg></div>
             <h3>Construction</h3>
             <ul class="card-list">
               <li>building construction</li>
@@ -179,13 +322,9 @@
             </ul>
           </article>
 
-          <article class="card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="9" />
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-              </svg>
-            </div>
+          <article class="card reveal" id="svc-03">
+            <span class="card-num">03</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-travel" /></svg></div>
             <h3>Travel &amp; Tourism</h3>
             <ul class="card-list">
               <li>travel and tourism services</li>
@@ -195,15 +334,9 @@
             </ul>
           </article>
 
-          <article class="card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M7 20V5" />
-                <path d="M3.5 8.5 7 5l3.5 3.5" />
-                <path d="M17 4v15" />
-                <path d="M13.5 15.5 17 19l3.5-3.5" />
-              </svg>
-            </div>
+          <article class="card reveal" id="svc-04">
+            <span class="card-num">04</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-importexport" /></svg></div>
             <h3>Import &amp; Export</h3>
             <ul class="card-list">
               <li>importation and exportation of general goods</li>
@@ -213,13 +346,9 @@
             </ul>
           </article>
 
-          <article class="card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                <polyline points="17 6 23 6 23 12" />
-              </svg>
-            </div>
+          <article class="card reveal" id="svc-05">
+            <span class="card-num">05</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-investment" /></svg></div>
             <h3>Investment &amp; Business Facilitation</h3>
             <ul class="card-list">
               <li>investment opportunity identification</li>
@@ -229,15 +358,9 @@
             </ul>
           </article>
 
-          <article class="card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-            </div>
+          <article class="card reveal" id="svc-06">
+            <span class="card-num">06</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-recruitment" /></svg></div>
             <h3>Recruitment &amp; Workforce Mobility</h3>
             <ul class="card-list">
               <li>international recruitment facilitation</li>
@@ -247,15 +370,9 @@
             </ul>
           </article>
 
-          <article class="card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2.7" y="10" width="18.6" height="5.6" rx="1.8" />
-                <path d="M6.5 10l1.5-3.4a1.8 1.8 0 0 1 1.7-1.1h4.6a1.8 1.8 0 0 1 1.7 1.1L17.5 10" />
-                <circle cx="7.5" cy="17.4" r="1.7" />
-                <circle cx="16.5" cy="17.4" r="1.7" />
-              </svg>
-            </div>
+          <article class="card reveal" id="svc-07">
+            <span class="card-num">07</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-automotive" /></svg></div>
             <h3>Automotive</h3>
             <ul class="card-list">
               <li>brand-new and home-used spare parts</li>
@@ -265,14 +382,9 @@
             </ul>
           </article>
 
-          <article class="card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                <path d="M3 6h18" />
-                <path d="M16 10a4 4 0 0 1-8 0" />
-              </svg>
-            </div>
+          <article class="card reveal" id="svc-08">
+            <span class="card-num">08</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-trading" /></svg></div>
             <h3>General Trading</h3>
             <ul class="card-list">
               <li>general merchandise</li>
@@ -285,8 +397,12 @@
       </div>
     </section>
 
-    <!-- ===== 4. Partnership Opportunities ===== -->
-    <section class="section section-dark" id="partnership">
+    <!-- ===== Partnership Opportunities ===== -->
+    <section class="section partnership" id="partnership">
+      <div class="partnership-bg" aria-hidden="true">
+        <svg class="pattern-layer"><rect width="100%" height="100%" fill="url(#besago-pattern)" /></svg>
+        <span class="partnership-glow"></span>
+      </div>
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Work with us</p>
@@ -309,86 +425,119 @@
         </div>
       </div>
     </section>
-
-    <!-- ===== 5. Contact ===== -->
-    <section class="section section-alt" id="contact">
-      <div class="container contact-wrap">
-        <div class="contact-copy reveal">
+    <!-- ===== Contact ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
           <p class="eyebrow">Partner with us</p>
           <h2>Get in touch</h2>
-          <p>
-            Reach out to explore partnerships, trade, investment, property,
-            recruitment or business opportunities with Besago Ventures.
-          </p>
-          <div class="contact-details">
-            <p>
-              <strong>Email</strong>
-              <a href="mailto:besagoventures@gmail.com">besagoventures@gmail.com</a>
-            </p>
-            <p>
-              <strong>Phone / WhatsApp</strong>
-              <span class="contact-links">
-                <a href="tel:+233594472033">+233 594 472 033</a>
-                <a href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
-              </span>
-            </p>
-            <p>
-              <strong>Location</strong>
-              Kasoa, Central Region, Ghana
-            </p>
-          </div>
+          <p class="section-sub">Reach out to explore partnerships, trade, investment, property, recruitment or business opportunities with Besago Ventures.</p>
         </div>
 
-        <form class="contact-form reveal" id="contact-form" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
+        <div class="contact-grid">
+          <div class="contact-rows reveal">
+            <div class="contact-row">
+              <span class="row-icon"><svg viewBox="0 0 24 24"><use href="#i-mail" /></svg></span>
+              <span class="row-body">
+                <span class="row-label">Email</span>
+                <a href="mailto:besagoventures@gmail.com">besagoventures@gmail.com</a>
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="row-icon"><svg viewBox="0 0 24 24"><use href="#i-phone" /></svg></span>
+              <span class="row-body">
+                <span class="row-label">Phone / WhatsApp</span>
+                <span class="row-links">
+                  <a href="tel:+233594472033">+233 594 472 033</a>
+                  <a href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                </span>
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="row-icon"><svg viewBox="0 0 24 24"><use href="#i-pin" /></svg></span>
+              <span class="row-body">
+                <span class="row-label">Location</span>
+                <span class="row-text">Kasoa, Central Region, Ghana</span>
+              </span>
+            </div>
           </div>
-          <div class="field">
-            <label for="email">Email <span class="optional">(optional)</span></label>
-            <input type="email" id="email" name="email" placeholder="you@company.com" />
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="How can we work together?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Send via email</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-note">This form opens your email application with the message pre-filled — nothing is sent from this website.</p>
-        </form>
+
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="optional">(optional)</span></label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="How can we work together?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-block">Send via email</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">This form opens your email application with the message pre-filled — nothing is sent from this website.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== 6. Footer ===== -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="#top" class="logo">
-          <!-- LOGO PLACEHOLDER: replace assets/logo.svg with the real logo -->
-          <span class="logo-mark">
-            <img src="assets/logo.svg" alt="" title="Logo placeholder" width="38" height="38" />
-          </span>
-          <span class="logo-text">Besago <em>Ventures</em></span>
-        </a>
-        <p>Connecting Business, Investment &amp; Opportunities</p>
+    <svg class="pattern-layer pattern-footer" aria-hidden="true"><rect width="100%" height="100%" fill="url(#besago-pattern)" /></svg>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="logo" aria-label="Besago Ventures — home">
+            <svg class="logo-mark" viewBox="0 0 44 44" aria-hidden="true"><use href="#i-monogram" /></svg>
+            <span class="logo-text">
+              <span class="logo-primary">BESAGO</span>
+              <span class="logo-secondary">VENTURES</span>
+            </span>
+          </a>
+          <p class="footer-tagline">Connecting Business, Investment &amp; Opportunities</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Quick links">
+          <p class="footer-heading">Quick links</p>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">What We Do</a></li>
+            <li><a href="#partnership">Partnership</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links footer-contact">
+            <li><a href="mailto:besagoventures@gmail.com">besagoventures@gmail.com</a></li>
+            <li><a href="tel:+233594472033">+233 594 472 033</a></li>
+            <li><a href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+            <li><span>Kasoa, Central Region, Ghana</span></li>
+          </ul>
+        </div>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#about">About</a>
-        <a href="#services">What We Do</a>
-        <a href="#partnership">Partnership</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <p class="copyright">&copy; <span id="year">2026</span> Besago Ventures. Connecting Business, Investment &amp; Opportunities</p>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="year">2026</span> Besago Ventures. Connecting Business, Investment &amp; Opportunities</p>
+      </div>
     </div>
   </footer>
 
   <!-- Floating WhatsApp button -->
   <a class="whatsapp-fab" href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer" aria-label="Chat with Besago Ventures on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
-    </svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp" /></svg>
   </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowup" /></svg>
+  </button>
 
   <script src="js/main.js"></script>
 </body>

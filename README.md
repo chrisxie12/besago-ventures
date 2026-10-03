@@ -31,23 +31,25 @@ besago-ventures/
 ├── css/
 │   └── styles.css    # Design system (navy/gold), components, responsive rules, animations
 ├── js/
-│   └── main.js       # Mobile nav, scroll reveals, mailto contact form, footer year
+│   └── main.js       # Mobile nav, active links, staggered reveals, hero parallax,
+│                     # back-to-top, mailto contact form, footer year
 ├── assets/
-│   └── logo.svg      # ⚠ LOGO PLACEHOLDER — replace with the real logo
+│   └── logo.svg      # Designed wordmark (header + footer use the same inline SVG)
 ├── README.md
 └── .gitignore
 ```
 
 ### Sections (in order)
 
-1. **Hero** — tagline, short intro, "Chat on WhatsApp" and "Partner With Us" buttons
-2. **About** — business description, Vision, Mission, CEO
-3. **What We Do** — 8 service cards: real estate, construction, travel & tourism, import & export, investment facilitation, recruitment, automotive, general trading
-4. **Partnership Opportunities** — the sectors and partners Besago Ventures works with
-5. **Contact** — email, phone/WhatsApp, location, plus a contact form
-6. **Footer** — tagline and copyright
+1. **Hero** — tagline, short intro, "Chat on WhatsApp" and "Partner With Us" buttons, plus an abstract visual panel with the eight division icons
+2. **Divisions strip** — quick-nav chips linking to each of the 8 service cards
+3. **About** — business description, Vision, Mission, CEO (with clearly marked portrait and message placeholders)
+4. **What We Do** — 8 numbered service cards: real estate, construction, travel & tourism, import & export, investment facilitation, recruitment, automotive, general trading
+5. **Partnership Opportunities** — the sectors and partners Besago Ventures works with
+6. **Contact** — two-column layout: email, phone/WhatsApp and location rows, plus a contact form
+7. **Footer** — brand and tagline, quick links, contact details and copyright
 
-A floating **WhatsApp button** is fixed to the bottom-right on every screen size.
+A floating **WhatsApp button** is fixed to the bottom-right on every screen size, with a **back-to-top** button above it.
 
 ## Running locally
 
@@ -67,10 +69,10 @@ Then visit <http://localhost:8000>.
 
 | Placeholder | Where | What to do |
 |---|---|---|
-| Logo | `assets/logo.svg` (used in header + footer) | Replace the file with the real logo |
-| Hero photo | Hero section, marked `PHOTO PLACEHOLDER` | Swap in a company/project photo (1600 × 600) |
-| About photo | About section, marked `PHOTO PLACEHOLDER` | Swap in a company, office or project photo |
-| Favicon | `<head>` of `index.html` | Replace the inline data-URI favicon |
+| Logo / wordmark | `assets/logo.svg` (header + footer currently inline the same design) | Replace with the official brand artwork when available |
+| CEO portrait | About section, circular "Portrait placeholder" slot | Drop in a square portrait when supplied |
+| CEO message | About section, CEO card marked "Placeholder" | Replace with the CEO's actual message (no quote is invented) |
+| Favicon | `<head>` of `index.html` | Designed gold "B" monogram — replace if the brand ships its own favicon |
 | Open Graph | `<head>` of `index.html` | Add `og:url`, `og:image` and canonical URL once a domain exists |
 
 ## Notes
