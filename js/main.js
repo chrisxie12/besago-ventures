@@ -75,54 +75,13 @@
     revealEls.forEach((el) => el.classList.add("visible"));
   }
 
-  /* ---------- Animated counters ---------- */
-  const counters = document.querySelectorAll("[data-count]");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  const animateCount = (el) => {
-    const target = parseInt(el.dataset.count, 10) || 0;
-
-    if (reduceMotion) {
-      el.textContent = String(target);
-      return;
-    }
-
-    const duration = 1400;
-    const start = performance.now();
-
-    const tick = (now) => {
-      const progress = Math.min((now - start) / duration, 1);
-      // ease-out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = String(Math.round(target * eased));
-      if (progress < 1) requestAnimationFrame(tick);
-    };
-
-    requestAnimationFrame(tick);
-  };
-
-  if (counters.length) {
-    if ("IntersectionObserver" in window) {
-      const cio = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateCount(entry.target);
-              cio.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.6 }
-      );
-      counters.forEach((el) => cio.observe(el));
-    } else {
-      counters.forEach((el) => (el.textContent = el.dataset.count));
-    }
-  }
-
-  /* ---------- Contact form (client-side demo) ---------- */
+  /* ---------- Contact form → opens the visitor's mail client ----------
+     There is no backend: submitting builds a mailto: link to
+     besagoventures@gmail.com with the name and message pre-filled.
+     Nothing is sent from this website itself. */
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
+  const RECIPIENT = "besagoventures@gmail.com";
 
   if (form && status) {
     form.addEventListener("submit", (e) => {
@@ -133,20 +92,23 @@
       status.className = "form-status";
       form.querySelectorAll(".invalid").forEach((el) => el.classList.remove("invalid"));
 
-      // Validate required fields
-      const required = form.querySelectorAll("[required]");
+      const name = form.querySelector("#name");
+      const email = form.querySelector("#email");
+      const message = form.querySelector("#message");
       let firstInvalid = null;
 
-      required.forEach((field) => {
-        const value = field.value.trim();
-        const validEmail =
-          field.type !== "email" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      const flag = (field) => {
+        field.classList.add("invalid");
+        if (!firstInvalid) firstInvalid = field;
+      };
 
-        if (!value || !validEmail) {
-          field.classList.add("invalid");
-          if (!firstInvalid) firstInvalid = field;
-        }
-      });
+      if (!name.value.trim()) flag(name);
+      if (!message.value.trim()) flag(message);
+
+      const emailValue = email.value.trim();
+      if (emailValue && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+        flag(email);
+      }
 
       if (firstInvalid) {
         status.textContent = "Please fill in the highlighted fields.";
@@ -155,10 +117,24 @@
         return;
       }
 
-      // No backend yet — show a success message and reset.
-      status.textContent = "Thanks! Your message has been recorded — we'll be in touch.";
-      status.classList.add("ok");
-      form.reset();
+      // Build the mailto: link (name + message pre-filled, plus email if given)
+      const subject = `Website enquiry from ${name.value.trim()}`;
+      const lines = [`Name: ${name.value.trim()}`];
+      if (emailValue) lines.push(`Email: ${emailValue}`);
+      lines.push("", message.value.trim());
+
+      const href =
+        `mailto:${RECIPIENT}` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(lines.join("\r\n"))}`;
+
+      status.textContent =
+        `Opening your email application… If nothing happens, email us directly at ${RECIPIENT}.`;
+      status.classList.add("info");
+
+      // Hand off to the visitor's mail client (values stay in the form
+      // in case the mail app does not open and they need to copy them).
+      window.location.href = href;
     });
   }
 
