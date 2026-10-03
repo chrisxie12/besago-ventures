@@ -11,22 +11,9 @@
 
   /* ---------- Header: transparent → solid navy ---------- */
   const header = document.querySelector(".site-header");
-  const firstSection = document.getElementById("about");
-
-  const clearActive = () => {
-    document
-      .querySelectorAll('.site-nav a[href^="#"].active')
-      .forEach((a) => a.classList.remove("active"));
-  };
 
   const onScroll = () => {
     if (header) header.classList.toggle("scrolled", window.scrollY > 24);
-
-    // No active nav link while still in the hero
-    if (firstSection) {
-      const heroBottom = firstSection.offsetTop - window.innerHeight * 0.5;
-      if (window.scrollY < heroBottom) clearActive();
-    }
 
     // Back-to-top visibility
     if (backBtn) backBtn.classList.toggle("show", window.scrollY > 600);
@@ -62,8 +49,9 @@
     });
   }
 
-  /* ---------- Active link underline (gold) ---------- */
-  const sections = ["about", "services", "partnership", "contact"]
+  /* ---------- Active link underline (gold) ----------
+     "home" tracks the hero so the Home link lights up at the top. */
+  const sections = ["home", "about", "services", "partnership", "contact"]
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 

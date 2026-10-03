@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Ghanaian diversified business enterprise based in Kasoa, Ghana. Real estate, construction, travel &amp; tourism, import &amp; export, investment facilitation, recruitment, automotive services and general trading." />
-  <meta name="theme-color" content="#0B1B33" />
+  <meta name="theme-color" content="#071A2B" />
   <title>Besago Ventures — Connecting Business, Investment &amp; Opportunities</title>
 
   <!-- Open Graph / Twitter -->
@@ -20,11 +20,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script>document.documentElement.classList.add("js");</script>
   <!-- Favicon: gold "B" monogram -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230B1B33'/><rect x='4.5' y='4.5' width='55' height='55' rx='10' fill='none' stroke='%23C9A24B' stroke-width='2'/><text x='32' y='45' font-size='36' font-family='Georgia,serif' font-weight='bold' text-anchor='middle' fill='%23C9A24B'>B</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23071A2B'/><rect x='4.5' y='4.5' width='55' height='55' rx='8' fill='none' stroke='%23C9A227' stroke-width='2'/><text x='32' y='45' font-size='36' font-family='Georgia,serif' font-weight='bold' text-anchor='middle' fill='%23C9A227'>B</text></svg>" />
 
   <script type="application/ld+json">
   {
@@ -51,13 +51,13 @@
     <defs>
       <!-- Original abstract African-inspired geometric pattern -->
       <pattern id="besago-pattern" width="64" height="64" patternUnits="userSpaceOnUse">
-        <g fill="none" stroke="#C9A24B" stroke-width="1.25">
+        <g fill="none" stroke="#C9A227" stroke-width="1.25">
           <path d="M32 6 58 32 32 58 6 32Z" />
           <path d="M32 20 44 32 32 44 20 32Z" stroke-width="1" />
           <path d="M0 0l8 8M64 0l-8 8M0 64l8-8M64 64l-8-8" stroke-width="1" />
           <path d="M32 0v6M32 58v6M0 32h6M58 32h6" stroke-width="1" />
         </g>
-        <g fill="#C9A24B">
+        <g fill="#C9A227">
           <circle cx="32" cy="32" r="2" />
           <circle cx="0" cy="32" r="1.7" />
           <circle cx="64" cy="32" r="1.7" />
@@ -68,8 +68,8 @@
 
       <!-- Monogram -->
       <symbol id="i-monogram" viewBox="0 0 44 44">
-        <rect x="1" y="1" width="42" height="42" rx="12" fill="rgba(201,162,75,0.12)" stroke="#C9A24B" stroke-width="1.6" />
-        <text x="22" y="30.5" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="25" fill="#C9A24B">B</text>
+        <rect x="1" y="1" width="42" height="42" rx="9" fill="rgba(201,162,39,0.12)" stroke="#C9A227" stroke-width="1.6" />
+        <text x="22" y="30.5" text-anchor="middle" font-family="Sora, Georgia, serif" font-weight="600" font-size="24" fill="#C9A227">B</text>
       </symbol>
 
       <!-- Division / service icons -->
@@ -144,13 +144,17 @@
         <path d="M12 5v14" />
         <path d="m19 12-7 7-7-7" />
       </symbol>
+      <symbol id="i-arrowright" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 12h15" />
+        <path d="m13 6 6 6-6 6" />
+      </symbol>
     </defs>
   </svg>
 
   <!-- ===== Header ===== -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="#top" class="logo" aria-label="Besago Ventures — home">
+      <a href="#top" class="logo reveal" aria-label="Besago Ventures — home">
         <svg class="logo-mark" viewBox="0 0 44 44" aria-hidden="true"><use href="#i-monogram" /></svg>
         <span class="logo-text">
           <span class="logo-primary">BESAGO</span>
@@ -158,12 +162,13 @@
         </span>
       </a>
 
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <nav class="site-nav reveal" id="site-nav" aria-label="Primary">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">What We Do</a>
         <a href="#partnership">Partnership</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-gold btn-small">Partner With Us</a>
+        <a href="#contact" class="btn btn-gold btn-sm btn-nav-cta">Partner With Us</a>
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
@@ -176,46 +181,45 @@
     <!-- ===== Hero ===== -->
     <section class="hero" id="home">
       <div class="hero-bg" aria-hidden="true">
-        <div class="hero-gradient"></div>
+        <div class="hero-media" data-parallax="0.06">
+          <img
+            class="hero-img"
+            src="assets/img/hero-accra-1280.webp"
+            srcset="assets/img/hero-accra-1280.webp 1280w, assets/img/hero-accra-2400.webp 2400w"
+            sizes="100vw"
+            width="1280" height="720"
+            alt=""
+            fetchpriority="high" decoding="async" />
+        </div>
+        <div class="hero-overlay"></div>
         <svg class="pattern-layer"><rect width="100%" height="100%" fill="url(#besago-pattern)" /></svg>
-        <span class="hero-glow"></span>
-        <span class="shape shape-ring" data-parallax="0.10"></span>
-        <span class="shape shape-dots" data-parallax="0.16"></span>
-        <span class="shape shape-block" data-parallax="0.07"></span>
       </div>
 
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="hero-eyebrow reveal">Kasoa &middot; Central Region &middot; Ghana</p>
-          <h1 class="reveal">Connecting Business,<br />Investment &amp; <span class="accent">Opportunities</span></h1>
-          <p class="hero-lead reveal">
-            Besago Ventures is a Ghanaian diversified business enterprise based in
-            Kasoa, Central Region, Ghana — facilitating trade, investment, property
-            development, workforce opportunities and cross-border business relationships.
-          </p>
-          <div class="hero-actions reveal">
-            <a href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Chat on WhatsApp</a>
-            <a href="#contact" class="btn btn-outline">Partner With Us</a>
-          </div>
-        </div>
-
-        <div class="hero-panel reveal" aria-hidden="true">
-          <span class="panel-halo"></span>
-          <div class="panel-tiles">
-            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-realestate" /></svg></span>
-            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-construction" /></svg></span>
-            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-travel" /></svg></span>
-            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-importexport" /></svg></span>
-            <span class="panel-center"><svg class="logo-mark" viewBox="0 0 44 44"><use href="#i-monogram" /></svg></span>
-            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-investment" /></svg></span>
-            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-recruitment" /></svg></span>
-            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-automotive" /></svg></span>
-            <span class="panel-tile"><svg viewBox="0 0 24 24"><use href="#i-trading" /></svg></span>
-          </div>
+      <div class="container hero-inner">
+        <p class="hero-eyebrow reveal">Business &bull; Investment &bull; Opportunity</p>
+        <h1 class="hero-title reveal">
+          <span class="line">Connecting</span>
+          <span class="line">Business, Investment</span>
+          <span class="line">&amp; <span class="accent">Opportunities</span></span>
+        </h1>
+        <p class="hero-lead reveal">
+          Building partnerships and creating value across businesses,
+          investments, and opportunities.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#services" class="btn btn-outline">Explore Our Businesses</a>
+          <a href="#contact" class="btn btn-gold">Partner With Us</a>
         </div>
       </div>
 
-      <a class="hero-cue" href="#divisions" aria-label="Scroll to divisions"><span></span></a>
+      <div class="hero-foot">
+        <div class="container hero-foot-inner">
+          <p class="hero-geo">Ghana &bull; Africa &bull; Global Opportunities</p>
+          <a class="hero-cue" href="#divisions" aria-label="Scroll to divisions">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowdown" /></svg>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- ===== Divisions quick-nav ===== -->
@@ -239,10 +243,22 @@
     <section class="section about" id="about">
       <div class="container">
         <div class="about-grid">
-          <div class="about-lead reveal">
-            <p class="eyebrow">About us</p>
-            <h2>A diversified Ghanaian business enterprise.</h2>
+          <div class="about-head">
+            <div class="about-headline reveal">
+              <p class="eyebrow">About us</p>
+              <h2 class="editorial">Building value<br />through<br />opportunity.</h2>
+            </div>
+            <figure class="about-visual reveal">
+              <img
+                src="assets/img/about-tower-640.webp"
+                srcset="assets/img/about-tower-640.webp 640w, assets/img/about-tower-1120.webp 1120w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 440px"
+                width="640" height="800"
+                alt="Modern glass office tower seen from below"
+                loading="lazy" decoding="async" />
+            </figure>
           </div>
+
           <div class="about-body reveal">
             <p>
               Besago Ventures is a Ghanaian diversified business enterprise engaged
@@ -256,37 +272,49 @@
               development, workforce opportunities and cross-border business
               relationships.
             </p>
-          </div>
-        </div>
 
-        <div class="vm-grid">
-          <div class="vm-card reveal">
-            <p class="vm-label">Vision</p>
-            <p class="vm-quote">&ldquo;To build a trusted African business enterprise that connects people, investment, trade, property, skills and opportunities across Ghana, Africa and the international community.&rdquo;</p>
-          </div>
-          <div class="vm-card reveal">
-            <p class="vm-label">Mission</p>
-            <p class="vm-quote">&ldquo;To create sustainable economic opportunities through strategic partnerships, responsible investment, quality services, international trade and business development.&rdquo;</p>
-          </div>
-        </div>
-
-        <!-- CEO card -->
-        <div class="ceo-card reveal">
-          <div class="ceo-portrait" role="img" aria-label="Portrait placeholder for the CEO">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera" /></svg>
-            <span class="portrait-label">Portrait<br />placeholder</span>
-          </div>
-          <div class="ceo-content">
-            <p class="vm-label">CEO</p>
-            <p class="ceo-name">Apostle Dr. Benedict Owusu</p>
-            <div class="ceo-message">
-              <p class="message-label">Message from the CEO <span class="placeholder-badge">Placeholder</span></p>
-              <p class="message-text">Placeholder — a short message from the CEO will appear here. No content has been provided yet.</p>
+            <div class="vm-grid">
+              <div class="vm-item reveal">
+                <p class="vm-label">Vision</p>
+                <p class="vm-quote">&ldquo;To build a trusted African business enterprise that connects people, investment, trade, property, skills and opportunities across Ghana, Africa and the international community.&rdquo;</p>
+              </div>
+              <div class="vm-item reveal">
+                <p class="vm-label">Mission</p>
+                <p class="vm-quote">&ldquo;To create sustainable economic opportunities through strategic partnerships, responsible investment, quality services, international trade and business development.&rdquo;</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ===== Leadership ===== -->
+    <section class="section leadership">
+      <div class="container">
+        <div class="ceo-grid">
+          <div class="ceo-portrait-col reveal">
+            <figure class="ceo-portrait" role="img" aria-label="Portrait placeholder — an official photograph of the CEO has not been provided yet">
+              <svg class="portrait-mark" viewBox="0 0 44 44" aria-hidden="true"><use href="#i-monogram" /></svg>
+              <span class="portrait-camera" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-camera" /></svg></span>
+            </figure>
+          </div>
+
+          <div class="ceo-content reveal">
+            <p class="eyebrow">Message from the CEO</p>
+            <blockquote class="ceo-message">
+              <p class="message-text">A message from the CEO will be published here once it has been provided.</p>
+              <span class="pending-badge">To be provided</span>
+            </blockquote>
+            <div class="ceo-id">
+              <p class="ceo-name">Apostle Dr. Benedict Owusu</p>
+              <p class="ceo-role">Chief Executive Officer</p>
+              <p class="ceo-org">Besago Ventures</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== What We Do ===== -->
     <section class="section services" id="services">
       <div class="container">
@@ -296,146 +324,312 @@
           <p class="section-sub">From real estate and construction to trade, investment and workforce mobility.</p>
         </div>
 
-        <div class="card-grid">
-          <article class="card reveal" id="svc-01">
-            <span class="card-num">01</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-realestate" /></svg></div>
-            <h3>Real Estate Development &amp; Property Management</h3>
-            <ul class="card-list">
-              <li>property development and investment</li>
-              <li>land and property acquisition facilitation</li>
-              <li>property management</li>
-              <li>joint ventures</li>
-            </ul>
+        <div class="work-grid">
+          <article class="work-card reveal" id="svc-01">
+            <div class="work-media">
+              <img
+                src="assets/img/div-property-640.webp"
+                srcset="assets/img/div-property-640.webp 640w, assets/img/div-property-1280.webp 1280w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 600px"
+                width="640" height="400"
+                alt="Contemporary building facade with a geometric screen"
+                loading="lazy" decoding="async" />
+              <span class="work-num">01</span>
+            </div>
+            <div class="work-body">
+              <div class="work-title-row">
+                <h3>Real Estate Development &amp; Property Management</h3>
+                <a class="work-arrow" href="#contact" aria-label="Enquire about Real Estate Development &amp; Property Management">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+                </a>
+              </div>
+              <ul class="work-list">
+                <li>property development and investment</li>
+                <li>land and property acquisition facilitation</li>
+                <li>property management</li>
+                <li>joint ventures</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card reveal" id="svc-02">
-            <span class="card-num">02</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-construction" /></svg></div>
-            <h3>Construction</h3>
-            <ul class="card-list">
-              <li>building construction</li>
-              <li>project and construction management</li>
-              <li>residential and commercial development</li>
-              <li>warehouse and industrial construction</li>
-              <li>renovation and maintenance</li>
-            </ul>
+          <article class="work-card reveal" id="svc-02">
+            <div class="work-media">
+              <img
+                src="assets/img/div-construction-640.webp"
+                srcset="assets/img/div-construction-640.webp 640w, assets/img/div-construction-1280.webp 1280w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 600px"
+                width="640" height="400"
+                alt="Tower cranes above an active construction site"
+                loading="lazy" decoding="async" />
+              <span class="work-num">02</span>
+            </div>
+            <div class="work-body">
+              <div class="work-title-row">
+                <h3>Construction</h3>
+                <a class="work-arrow" href="#contact" aria-label="Enquire about Construction">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+                </a>
+              </div>
+              <ul class="work-list">
+                <li>building construction</li>
+                <li>project and construction management</li>
+                <li>residential and commercial development</li>
+                <li>warehouse and industrial construction</li>
+                <li>renovation and maintenance</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card reveal" id="svc-03">
-            <span class="card-num">03</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-travel" /></svg></div>
-            <h3>Travel &amp; Tourism</h3>
-            <ul class="card-list">
-              <li>travel and tourism services</li>
-              <li>international travel arrangements</li>
-              <li>tourism promotion</li>
-              <li>business and investment travel facilitation</li>
-            </ul>
+          <article class="work-card reveal" id="svc-03">
+            <div class="work-media">
+              <img
+                src="assets/img/div-travel-640.webp"
+                srcset="assets/img/div-travel-640.webp 640w, assets/img/div-travel-1280.webp 1280w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 600px"
+                width="640" height="400"
+                alt="Travellers in a busy airport departures hall"
+                loading="lazy" decoding="async" />
+              <span class="work-num">03</span>
+            </div>
+            <div class="work-body">
+              <div class="work-title-row">
+                <h3>Travel &amp; Tourism</h3>
+                <a class="work-arrow" href="#contact" aria-label="Enquire about Travel &amp; Tourism">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+                </a>
+              </div>
+              <ul class="work-list">
+                <li>travel and tourism services</li>
+                <li>international travel arrangements</li>
+                <li>tourism promotion</li>
+                <li>business and investment travel facilitation</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card reveal" id="svc-04">
-            <span class="card-num">04</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-importexport" /></svg></div>
-            <h3>Import &amp; Export</h3>
-            <ul class="card-list">
-              <li>importation and exportation of general goods</li>
-              <li>international sourcing and supply</li>
-              <li>trade facilitation</li>
-              <li>connecting suppliers and buyers</li>
-            </ul>
+          <article class="work-card reveal" id="svc-04">
+            <div class="work-media">
+              <img
+                src="assets/img/div-import-export-640.webp"
+                srcset="assets/img/div-import-export-640.webp 640w, assets/img/div-import-export-1280.webp 1280w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 600px"
+                width="640" height="400"
+                alt="Stacked shipping containers at a freight terminal"
+                loading="lazy" decoding="async" />
+              <span class="work-num">04</span>
+            </div>
+            <div class="work-body">
+              <div class="work-title-row">
+                <h3>Import &amp; Export</h3>
+                <a class="work-arrow" href="#contact" aria-label="Enquire about Import &amp; Export">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+                </a>
+              </div>
+              <ul class="work-list">
+                <li>importation and exportation of general goods</li>
+                <li>international sourcing and supply</li>
+                <li>trade facilitation</li>
+                <li>connecting suppliers and buyers</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card reveal" id="svc-05">
-            <span class="card-num">05</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-investment" /></svg></div>
-            <h3>Investment &amp; Business Facilitation</h3>
-            <ul class="card-list">
-              <li>investment opportunity identification</li>
-              <li>investor-business connections</li>
-              <li>joint venture facilitation</li>
-              <li>market-entry and cross-border facilitation</li>
-            </ul>
+          <article class="work-card reveal" id="svc-05">
+            <div class="work-media">
+              <img
+                src="assets/img/div-investment-640.webp"
+                srcset="assets/img/div-investment-640.webp 640w, assets/img/div-investment-1280.webp 1280w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 600px"
+                width="640" height="400"
+                alt="Executives in discussion around a boardroom table"
+                loading="lazy" decoding="async" />
+              <span class="work-num">05</span>
+            </div>
+            <div class="work-body">
+              <div class="work-title-row">
+                <h3>Investment &amp; Business Facilitation</h3>
+                <a class="work-arrow" href="#contact" aria-label="Enquire about Investment &amp; Business Facilitation">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+                </a>
+              </div>
+              <ul class="work-list">
+                <li>investment opportunity identification</li>
+                <li>investor-business connections</li>
+                <li>joint venture facilitation</li>
+                <li>market-entry and cross-border facilitation</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card reveal" id="svc-06">
-            <span class="card-num">06</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-recruitment" /></svg></div>
-            <h3>Recruitment &amp; Workforce Mobility</h3>
-            <ul class="card-list">
-              <li>international recruitment facilitation</li>
-              <li>workforce mobility opportunities</li>
-              <li>employer-worker connections</li>
-              <li>recruitment partnerships</li>
-            </ul>
+          <article class="work-card reveal" id="svc-06">
+            <div class="work-media">
+              <img
+                src="assets/img/div-recruitment-640.webp"
+                srcset="assets/img/div-recruitment-640.webp 640w, assets/img/div-recruitment-1280.webp 1280w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 600px"
+                width="640" height="400"
+                alt="Colleagues meeting in a modern office"
+                loading="lazy" decoding="async" />
+              <span class="work-num">06</span>
+            </div>
+            <div class="work-body">
+              <div class="work-title-row">
+                <h3>Recruitment &amp; Workforce Mobility</h3>
+                <a class="work-arrow" href="#contact" aria-label="Enquire about Recruitment &amp; Workforce Mobility">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+                </a>
+              </div>
+              <ul class="work-list">
+                <li>international recruitment facilitation</li>
+                <li>workforce mobility opportunities</li>
+                <li>employer-worker connections</li>
+                <li>recruitment partnerships</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card reveal" id="svc-07">
-            <span class="card-num">07</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-automotive" /></svg></div>
-            <h3>Automotive</h3>
-            <ul class="card-list">
-              <li>brand-new and home-used spare parts</li>
-              <li>fan belts, fuel pumps, bearings and other components</li>
-              <li>wholesale and retail supply</li>
-              <li>automotive sourcing</li>
-            </ul>
+          <article class="work-card reveal" id="svc-07">
+            <div class="work-media">
+              <img
+                src="assets/img/div-automotive-640.webp"
+                srcset="assets/img/div-automotive-640.webp 640w, assets/img/div-automotive-1280.webp 1280w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 600px"
+                width="640" height="400"
+                alt="Assorted automotive engine components"
+                loading="lazy" decoding="async" />
+              <span class="work-num">07</span>
+            </div>
+            <div class="work-body">
+              <div class="work-title-row">
+                <h3>Automotive</h3>
+                <a class="work-arrow" href="#contact" aria-label="Enquire about Automotive">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+                </a>
+              </div>
+              <ul class="work-list">
+                <li>brand-new and home-used spare parts</li>
+                <li>fan belts, fuel pumps, bearings and other components</li>
+                <li>wholesale and retail supply</li>
+                <li>automotive sourcing</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="card reveal" id="svc-08">
-            <span class="card-num">08</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-trading" /></svg></div>
-            <h3>General Trading</h3>
-            <ul class="card-list">
-              <li>general merchandise</li>
-              <li>commercial sourcing and distribution</li>
-              <li>wholesale and retail trading</li>
-              <li>local and international trading partnerships</li>
-            </ul>
+          <article class="work-card reveal" id="svc-08">
+            <div class="work-media">
+              <img
+                src="assets/img/div-trading-640.webp"
+                srcset="assets/img/div-trading-640.webp 640w, assets/img/div-trading-1280.webp 1280w"
+                sizes="(max-width: 900px) calc(100vw - 40px), 600px"
+                width="640" height="400"
+                alt="A vendor arranging fresh produce at a market stall"
+                loading="lazy" decoding="async" />
+              <span class="work-num">08</span>
+            </div>
+            <div class="work-body">
+              <div class="work-title-row">
+                <h3>General Trading</h3>
+                <a class="work-arrow" href="#contact" aria-label="Enquire about General Trading">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+                </a>
+              </div>
+              <ul class="work-list">
+                <li>general merchandise</li>
+                <li>commercial sourcing and distribution</li>
+                <li>wholesale and retail trading</li>
+                <li>local and international trading partnerships</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== Partnership Opportunities ===== -->
+    <!-- ===== Positioning / impact ===== -->
+    <section class="section stats" aria-label="How we work">
+      <div class="stats-bg" aria-hidden="true">
+        <svg class="pattern-layer"><rect width="100%" height="100%" fill="url(#besago-pattern)" /></svg>
+      </div>
+      <div class="container">
+        <ul class="stats-grid">
+          <li class="stat reveal">
+            <span class="stat-rule" aria-hidden="true"></span>
+            <p class="stat-label">Multi-sector</p>
+            <p class="stat-text">Business interests across complementary industries</p>
+          </li>
+          <li class="stat reveal">
+            <span class="stat-rule" aria-hidden="true"></span>
+            <p class="stat-label">Partnership-led</p>
+            <p class="stat-text">Focused on long-term relationships and collaboration</p>
+          </li>
+          <li class="stat reveal">
+            <span class="stat-rule" aria-hidden="true"></span>
+            <p class="stat-label">Growth-oriented</p>
+            <p class="stat-text">Connecting opportunities with sustainable value creation</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Partnership ===== -->
     <section class="section partnership" id="partnership">
       <div class="partnership-bg" aria-hidden="true">
+        <img class="partnership-tex" src="assets/img/partnership-texture.webp" width="1280" height="720" alt="" loading="lazy" decoding="async" />
+        <div class="partnership-scrim"></div>
         <svg class="pattern-layer"><rect width="100%" height="100%" fill="url(#besago-pattern)" /></svg>
-        <span class="partnership-glow"></span>
       </div>
       <div class="container">
-        <div class="section-head reveal">
+        <div class="partnership-cta reveal">
           <p class="eyebrow">Work with us</p>
-          <h2>Partnership Opportunities</h2>
-          <p class="section-sub">We connect with partners in Ghana and internationally across the following areas.</p>
+          <h2 class="display-lg">
+            <span class="line">Let's build</span>
+            <span class="line">something</span>
+            <span class="line accent">valuable.</span>
+          </h2>
+          <p class="partnership-lead">
+            Whether you're looking to invest, partner, develop, trade or explore
+            a new opportunity, let's start a conversation.
+          </p>
+          <a href="#contact" class="btn btn-gold">
+            Partner With Us
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+          </a>
         </div>
 
-        <div class="partner-grid">
-          <div class="partner-tile reveal">International investors</div>
-          <div class="partner-tile reveal">Real estate developers</div>
-          <div class="partner-tile reveal">Construction companies</div>
-          <div class="partner-tile reveal">Manufacturers and suppliers</div>
-          <div class="partner-tile reveal">Recruitment agencies</div>
-          <div class="partner-tile reveal">Travel and tourism companies</div>
-          <div class="partner-tile reveal">Automotive companies</div>
-          <div class="partner-tile reveal">Importers and exporters</div>
-          <div class="partner-tile reveal">Financial and investment partners</div>
-          <div class="partner-tile reveal">Government and private-sector institutions</div>
-          <div class="partner-tile reveal">Joint-venture partners</div>
+        <div class="partner-areas reveal">
+          <p class="areas-intro">We connect with partners in Ghana and internationally across the following areas.</p>
+          <ul class="partner-grid">
+            <li class="partner-tile">International investors</li>
+            <li class="partner-tile">Real estate developers</li>
+            <li class="partner-tile">Construction companies</li>
+            <li class="partner-tile">Manufacturers and suppliers</li>
+            <li class="partner-tile">Recruitment agencies</li>
+            <li class="partner-tile">Travel and tourism companies</li>
+            <li class="partner-tile">Automotive companies</li>
+            <li class="partner-tile">Importers and exporters</li>
+            <li class="partner-tile">Financial and investment partners</li>
+            <li class="partner-tile">Government and private-sector institutions</li>
+            <li class="partner-tile">Joint-venture partners</li>
+          </ul>
         </div>
       </div>
     </section>
+
     <!-- ===== Contact ===== -->
     <section class="section contact" id="contact">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Partner with us</p>
-          <h2>Get in touch</h2>
-          <p class="section-sub">Reach out to explore partnerships, trade, investment, property, recruitment or business opportunities with Besago Ventures.</p>
-        </div>
+      <div class="container contact-grid">
+        <div class="contact-intro reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 class="display-md">Let's talk</h2>
+          <p class="contact-lead">
+            Have an opportunity, partnership or project in mind? We'd love to hear from you.
+          </p>
+          <p class="contact-sub">
+            Reach out to explore partnerships, trade, investment, property, recruitment
+            or business opportunities with Besago Ventures.
+          </p>
 
-        <div class="contact-grid">
-          <div class="contact-rows reveal">
+          <div class="contact-rows">
             <div class="contact-row">
               <span class="row-icon"><svg viewBox="0 0 24 24"><use href="#i-mail" /></svg></span>
               <span class="row-body">
@@ -447,10 +641,7 @@
               <span class="row-icon"><svg viewBox="0 0 24 24"><use href="#i-phone" /></svg></span>
               <span class="row-body">
                 <span class="row-label">Phone / WhatsApp</span>
-                <span class="row-links">
-                  <a href="tel:+233594472033">+233 594 472 033</a>
-                  <a href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
-                </span>
+                <a href="tel:+233594472033">+233 594 472 033</a>
               </span>
             </div>
             <div class="contact-row">
@@ -462,24 +653,32 @@
             </div>
           </div>
 
-          <form class="contact-form reveal" id="contact-form" novalidate>
-            <div class="field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="email">Email <span class="optional">(optional)</span></label>
-              <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" />
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="How can we work together?" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold btn-block">Send via email</button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            <p class="form-note">This form opens your email application with the message pre-filled — nothing is sent from this website.</p>
-          </form>
+          <a class="btn btn-whatsapp" href="https://wa.me/233594472033" target="_blank" rel="noopener noreferrer">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+            Chat on WhatsApp
+          </a>
         </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="optional">(optional)</span></label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we work together?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-block">
+            Send via email
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrowright" /></svg>
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">This form opens your email application with the message pre-filled — nothing is sent from this website.</p>
+        </form>
       </div>
     </section>
   </main>
@@ -497,12 +696,13 @@
               <span class="logo-secondary">VENTURES</span>
             </span>
           </a>
-          <p class="footer-tagline">Connecting Business, Investment &amp; Opportunities</p>
+          <p class="footer-tagline">Connecting business, investment &amp; opportunities.</p>
         </div>
 
-        <nav class="footer-col" aria-label="Quick links">
-          <p class="footer-heading">Quick links</p>
+        <nav class="footer-col" aria-label="Explore">
+          <p class="footer-heading">Explore</p>
           <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">What We Do</a></li>
             <li><a href="#partnership">Partnership</a></li>
@@ -511,7 +711,7 @@
         </nav>
 
         <div class="footer-col">
-          <p class="footer-heading">Contact</p>
+          <p class="footer-heading">Connect</p>
           <ul class="footer-links footer-contact">
             <li><a href="mailto:besagoventures@gmail.com">besagoventures@gmail.com</a></li>
             <li><a href="tel:+233594472033">+233 594 472 033</a></li>

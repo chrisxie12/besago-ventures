@@ -29,27 +29,47 @@ Single-page static site — no build step and no dependencies.
 besago-ventures/
 ├── index.html        # All sections (see below)
 ├── css/
-│   └── styles.css    # Design system (navy/gold), components, responsive rules, animations
+│   └── styles.css    # Design system (navy/gold palette, Sora + Inter),
+│                     # components, responsive rules, reduced-motion support
 ├── js/
-│   └── main.js       # Mobile nav, active links, staggered reveals, hero parallax,
+│   └── main.js       # Mobile nav, active links, scroll reveals, hero parallax,
 │                     # back-to-top, mailto contact form, footer year
 ├── assets/
-│   └── logo.svg      # Designed wordmark (header + footer use the same inline SVG)
+│   ├── logo.svg      # Designed wordmark (reference copy)
+│   └── img/          # Optimised responsive WebP imagery (≈1.6 MB total)
 ├── README.md
 └── .gitignore
 ```
 
 ### Sections (in order)
 
-1. **Hero** — tagline, short intro, "Chat on WhatsApp" and "Partner With Us" buttons, plus an abstract visual panel with the eight division icons
-2. **Divisions strip** — quick-nav chips linking to each of the 8 service cards
-3. **About** — business description, Vision, Mission, CEO (with clearly marked portrait and message placeholders)
-4. **What We Do** — 8 numbered service cards: real estate, construction, travel & tourism, import & export, investment facilitation, recruitment, automotive, general trading
-5. **Partnership Opportunities** — the sectors and partners Besago Ventures works with
-6. **Contact** — two-column layout: email, phone/WhatsApp and location rows, plus a contact form
-7. **Footer** — brand and tagline, quick links, contact details and copyright
+1. **Hero** — full-screen Accra skyline with dark navy overlay, gold eyebrow "Business • Investment • Opportunity", headline "Connecting Business, Investment & Opportunities", intro line, "Explore Our Businesses" and "Partner With Us" buttons, plus a bottom bar ("Ghana • Africa • Global Opportunities") and scroll cue
+2. **Divisions strip** — 8 quick-nav chips linking to each service card
+3. **About** — editorial "Building Value Through Opportunity." split layout with image, business description, Vision and Mission
+4. **Leadership** — CEO section with a monogram portrait frame and an open message slot (nothing invented)
+5. **What We Do** — 8 numbered, image-led cards: real estate, construction, travel & tourism, import & export, investment facilitation, recruitment, automotive, general trading
+6. **Positioning** — qualitative statements only (Multi-sector, Partnership-led, Growth-oriented); no fabricated metrics
+7. **Partnership** — dark conversion section ("Let's Build Something Valuable.") over an architectural texture, with the partner types Besago Ventures works with
+8. **Contact** — "Let's Talk" split: email, phone/WhatsApp and location rows, WhatsApp button, plus a mailto contact form
+9. **Footer** — brand, short description, Explore / Connect columns and copyright
 
 A floating **WhatsApp button** is fixed to the bottom-right on every screen size, with a **back-to-top** button above it.
+
+## Design system
+
+- **Palette:** navy `#071A2B`, navy-dark `#04111D`, charcoal `#101820`, gold `#C9A227`, gold-light `#DDBB52`, cream `#F7F5EF`, muted grey `#69727D`
+- **Type:** Sora (headings, 500/600/700) + Inter (body, 400/500/600) via Google Fonts, `display=swap`
+- **Layout:** 1280px container, full-width colour-blocked sections, editorial split grids
+- **Motion:** entrance reveals, slow hero drift/parallax, hover micro-interactions — all disabled under `prefers-reduced-motion`
+- **Accessibility:** WCAG 2.1 AA contrast (verified with Lighthouse 100/100/100 for accessibility, best practices and SEO), visible focus rings, skip link, semantic landmarks, `aria` labels on icon controls
+
+### Imagery
+
+Photography is downloaded and locally hosted (no hotlinking):
+
+- Source: [Pexels](https://www.pexels.com/license/) free-use licence, stored as responsive WebP in `assets/img/` (640/1280 widths + `srcset` on cards)
+- Images illustrate sectors generically — they do **not** depict Besago Ventures projects or imply ownership
+- Favicon/logo are original SVG artwork designed for this site
 
 ## Running locally
 
@@ -69,15 +89,14 @@ Then visit <http://localhost:8000>.
 
 | Placeholder | Where | What to do |
 |---|---|---|
-| Logo / wordmark | `assets/logo.svg` (header + footer currently inline the same design) | Replace with the official brand artwork when available |
-| CEO portrait | About section, circular "Portrait placeholder" slot | Drop in a square portrait when supplied |
-| CEO message | About section, CEO card marked "Placeholder" | Replace with the CEO's actual message (no quote is invented) |
+| CEO portrait | Leadership section, monogram portrait frame | Drop in a square portrait when supplied |
+| CEO message | Leadership section, "To be provided" slot | Replace with the CEO's actual message (no quote is invented) |
 | Favicon | `<head>` of `index.html` | Designed gold "B" monogram — replace if the brand ships its own favicon |
 | Open Graph | `<head>` of `index.html` | Add `og:url`, `og:image` and canonical URL once a domain exists |
 
 ## Notes
 
-- **The contact form has no backend.** It builds a `mailto:` link to `besagoventures@gmail.com` with the visitor's name and message pre-filled, and opens their email application. Nothing is sent from the website itself.
-- Fonts are loaded from Google Fonts (Fraunces + Inter).
-- Responsive at mobile, tablet and desktop breakpoints; respects `prefers-reduced-motion`.
+- **The contact form has no backend.** It builds a `mailto:` link to `besagoventures@gmail.com` with the visitor's name and message pre-filled, and opens their email application. The status message says exactly that — nothing is sent from the website itself, and no fake success state is shown.
+- Fonts are loaded from Google Fonts (Sora + Inter) with preconnect.
+- Responsive at 1440 / 1280 / 1024 / 768 / 430 / 390 / 375 with no horizontal overflow.
 - All content is real business information — no invented portfolio, team, stats or testimonials.
