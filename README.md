@@ -61,6 +61,7 @@ A floating **WhatsApp button** is fixed to the bottom-right on every screen size
 - **Type:** Sora (headings, 500/600/700) + Inter (body, 400/500/600) via Google Fonts, `display=swap`
 - **Layout:** 1280px container, full-width colour-blocked sections, editorial split grids
 - **Motion:** floating navbar drops in on load and tucks away while scrolling down (reveals on scroll up), entrance reveals, slow hero drift/parallax, staggered mobile menu, hover micro-interactions — all disabled under `prefers-reduced-motion`
+- **Icons:** one inline SVG sprite in `index.html` (`<defs>` + `<use>`) using the [Lucide](https://lucide.dev) set (ISC licence) — 24px grid, stroke 2, round caps/joins, `currentColor`. Animated: division icons spring-pop on hover, card/CTA arrows loop across on hover, contact-row icons tilt onto a solid gold tile, eyebrow and stat rules draw in on scroll, WhatsApp button ripples, partner diamonds spin, logo monogram springs — all CSS-only and reduced-motion safe
 - **Accessibility:** WCAG 2.1 AA contrast (verified with Lighthouse 100/100/100 for accessibility, best practices and SEO), visible focus rings, skip link, semantic landmarks, `aria` labels on icon controls
 
 ### Imagery

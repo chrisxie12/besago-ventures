@@ -62,6 +62,7 @@
 
   /* ---- Motion ---- */
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* overshoot — icon pops */
 }
 
 /* ---------- Reset ---------- */
@@ -228,6 +229,14 @@ h3 {
   width: 36px;
   height: 2px;
   background: var(--gold);
+  transform-origin: left;
+  transition: transform 0.7s var(--ease) 0.15s;
+}
+
+/* Draw-in: the gold rule grows out as its block reveals */
+.js .reveal:not(.visible) .eyebrow::before,
+.js .eyebrow.reveal:not(.visible)::before {
+  transform: scaleX(0);
 }
 
 .section-head {
@@ -332,8 +341,28 @@ h3 {
   transition: transform 0.3s var(--ease);
 }
 
+/* Arrow that travels out right and re-enters from the left while hovering */
+@keyframes arrow-slide {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(7px);
+    opacity: 0;
+  }
+  55% {
+    transform: translateX(-7px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .btn:hover .btn-icon {
-  transform: translateX(3px);
+  animation: arrow-slide 0.95s var(--ease) infinite;
 }
 
 .btn-whatsapp {
@@ -351,6 +380,7 @@ h3 {
 
 .btn-whatsapp:hover .btn-icon {
   transform: none;
+  animation: none; /* brand glyph stays put */
 }
 
 /* ---------- Wordmark ---------- */
@@ -364,6 +394,11 @@ h3 {
   width: 34px;
   height: 34px;
   flex: none;
+  transition: transform 0.55s var(--spring);
+}
+
+.logo:hover .logo-mark {
+  transform: rotate(-8deg) scale(1.1);
 }
 
 .logo-text {
@@ -772,7 +807,8 @@ h3 {
   width: 22px;
   height: 22px;
   color: var(--gold-ink);
-  transition: color 0.3s var(--ease);
+  transition: color 0.3s var(--ease),
+    transform 0.5s var(--spring);
 }
 
 .division-chips a:hover {
@@ -785,6 +821,7 @@ h3 {
 
 .division-chips a:hover svg {
   color: var(--gold-light);
+  transform: scale(1.18) rotate(-6deg);
 }
 
 /* ---------- About ---------- */
@@ -1154,8 +1191,9 @@ h3 {
   color: var(--gold-light);
 }
 
-.work-card:hover .work-arrow svg {
-  transform: translateX(3px);
+.work-card:hover .work-arrow svg,
+.work-arrow:focus-visible svg {
+  animation: arrow-slide 0.95s var(--ease) infinite;
 }
 
 .work-list {
@@ -1223,6 +1261,12 @@ h3 {
   height: 2px;
   background: var(--gold);
   margin-bottom: 20px;
+  transform-origin: left;
+  transition: transform 0.8s var(--ease) 0.2s;
+}
+
+.js .stat.reveal:not(.visible) .stat-rule {
+  transform: scaleX(0);
 }
 
 .stat-label {
@@ -1353,12 +1397,17 @@ h3 {
   height: 8px;
   background: var(--gold);
   transform: rotate(45deg);
+  transition: transform 0.5s var(--spring);
 }
 
 .partner-tile:hover {
   transform: translateY(-3px);
   border-color: rgba(201, 162, 39, 0.7);
   background: rgba(255, 255, 255, 0.08);
+}
+
+.partner-tile:hover::before {
+  transform: rotate(135deg) scale(1.25);
 }
 
 /* ---------- Contact ---------- */
@@ -1426,6 +1475,14 @@ h3 {
   border-radius: var(--r-btn);
   background: rgba(201, 162, 39, 0.14);
   color: var(--gold-ink);
+  transition: transform 0.45s var(--spring), background 0.3s var(--ease),
+    color 0.3s var(--ease);
+}
+
+.contact-row:hover .row-icon {
+  transform: scale(1.12) rotate(-6deg);
+  background: var(--gold);
+  color: var(--navy-dark);
 }
 
 .row-icon svg {
@@ -1671,6 +1728,29 @@ h3 {
   box-shadow: 0 18px 38px -10px rgba(10, 90, 46, 0.6);
 }
 
+/* Slow outward ripple — keeps the CTA gently noticeable */
+.whatsapp-fab::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(27, 169, 83, 0.55);
+  pointer-events: none;
+  animation: fab-ring 2.6s var(--ease) infinite both;
+}
+
+@keyframes fab-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
 .back-to-top {
   position: fixed;
   right: 28px;
@@ -1708,6 +1788,20 @@ h3 {
   background: var(--gold);
   border-color: var(--gold);
   color: var(--navy-dark);
+}
+
+.back-to-top:hover svg {
+  animation: hop-up 0.7s var(--ease) infinite;
+}
+
+@keyframes hop-up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-4px);
+  }
 }
 
 /* ---------- Reveal animations ---------- */
