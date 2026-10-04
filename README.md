@@ -35,6 +35,8 @@ besago-ventures/
 ├── js/
 │   └── main.js       # Mobile nav, active links, scroll reveals, hero parallax,
 │                     # back-to-top, mailto contact form, footer year
+├── docs/
+│   └── business-profile.md  # Source of truth for every claim on the site
 ├── assets/
 │   └── img/          # Responsive WebP photography (≈1.6 MB) plus the official
 │                     # logo JPEGs (besago-logo, -640, -emblem-320)
