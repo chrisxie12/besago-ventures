@@ -9,14 +9,40 @@
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  /* ---------- Header: transparent → solid navy ---------- */
+  /* ---------- Header: transparent → solid, hide down / reveal up ---------- */
   const header = document.querySelector(".site-header");
+  let lastScrollY = window.scrollY;
+
+  if (header) {
+    // Release the entrance animation so it doesn't override the
+    // transform used by the hide/reveal state below.
+    const clearEntrance = () => {
+      header.style.animation = "none";
+    };
+    header.addEventListener("animationend", clearEntrance, { once: true });
+    window.setTimeout(clearEntrance, 1600);
+  }
 
   const onScroll = () => {
-    if (header) header.classList.toggle("scrolled", window.scrollY > 24);
+    const y = window.scrollY;
+
+    if (header) {
+      header.classList.toggle("scrolled", y > 24);
+
+      // Hide while scrolling down (below the hero top); reveal on scroll up.
+      const menuOpen = nav && nav.classList.contains("open");
+      if (reduceMotion.matches || menuOpen || y < 160) {
+        header.classList.remove("is-hidden");
+      } else if (y > lastScrollY + 6) {
+        header.classList.add("is-hidden");
+      } else if (y < lastScrollY - 6) {
+        header.classList.remove("is-hidden");
+      }
+    }
+    lastScrollY = y;
 
     // Back-to-top visibility
-    if (backBtn) backBtn.classList.toggle("show", window.scrollY > 600);
+    if (backBtn) backBtn.classList.toggle("show", y > 600);
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -29,6 +55,7 @@
     toggle.addEventListener("click", () => {
       const open = nav.classList.toggle("open");
       toggle.setAttribute("aria-expanded", String(open));
+      if (open && header) header.classList.remove("is-hidden");
     });
 
     // Close the menu after choosing a link

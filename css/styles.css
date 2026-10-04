@@ -40,7 +40,7 @@
 
   /* ---- Layout ---- */
   --container: 1280px;
-  --header-h: 72px;
+  --header-h: 64px;
   --header-top: 16px;
   --section-y: var(--sp-15);
 
@@ -361,8 +361,8 @@ h3 {
 }
 
 .logo-mark {
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   flex: none;
 }
 
@@ -374,14 +374,14 @@ h3 {
 
 .logo-primary {
   font-family: var(--font-display);
-  font-size: 1.18rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--white);
 }
 
 .logo-secondary {
-  margin-top: 5px;
+  margin-top: 4px;
   font-size: 0.75rem; /* 12px minimum for audits */
   font-weight: 600;
   letter-spacing: 0.26em;
@@ -390,6 +390,17 @@ h3 {
 }
 
 /* ---------- Header (floating nav) ---------- */
+@keyframes header-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -18px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
 .site-header {
   position: fixed;
   top: var(--header-top);
@@ -406,7 +417,20 @@ h3 {
   border-radius: var(--r-pill);
   box-shadow: 0 14px 36px -20px rgba(4, 17, 29, 0.7);
   transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease),
-    border-color 0.35s var(--ease);
+    border-color 0.35s var(--ease), transform 0.4s var(--ease),
+    opacity 0.3s ease, visibility 0s linear;
+  animation: header-in 0.65s var(--ease) 0.15s both;
+}
+
+/* Hide while scrolling down; reveal on the way back up */
+.site-header.is-hidden {
+  transform: translate(-50%, calc(-100% - var(--header-top) - 12px));
+  opacity: 0;
+  visibility: hidden; /* leaves the keyboard tab order while hidden */
+  pointer-events: none;
+  transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease),
+    border-color 0.35s var(--ease), transform 0.4s var(--ease),
+    opacity 0.3s ease, visibility 0s linear 0.4s;
 }
 
 .site-header.scrolled {
@@ -426,7 +450,7 @@ h3 {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .site-nav a:not(.btn) {
@@ -1757,6 +1781,29 @@ h3 {
     transform: translateY(0);
   }
 
+  /* Staggered entrance for menu items */
+  @keyframes menu-item-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .site-nav.open > * {
+    animation: menu-item-in 0.4s var(--ease) both;
+  }
+
+  .site-nav.open > *:nth-child(1) { animation-delay: 0.05s; }
+  .site-nav.open > *:nth-child(2) { animation-delay: 0.1s; }
+  .site-nav.open > *:nth-child(3) { animation-delay: 0.15s; }
+  .site-nav.open > *:nth-child(4) { animation-delay: 0.2s; }
+  .site-nav.open > *:nth-child(5) { animation-delay: 0.25s; }
+  .site-nav.open > *:nth-child(6) { animation-delay: 0.3s; }
+
   .site-nav a:not(.btn) {
     padding: 13px 4px;
     font-size: 1rem;
@@ -1844,6 +1891,7 @@ h3 {
 @media (max-width: 560px) {
   :root {
     --header-top: 12px;
+    --header-h: 60px;
   }
 
   .site-header {
