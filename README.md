@@ -28,6 +28,7 @@ Single-page static site — no build step and no dependencies.
 ```
 besago-ventures/
 ├── index.html        # All sections (see below)
+├── favicon.ico       # Official emblem icon (16/32/48 px)
 ├── css/
 │   └── styles.css    # Design system (navy/gold palette, Sora + Inter),
 │                     # components, responsive rules, reduced-motion support
@@ -71,7 +72,7 @@ Photography is downloaded and locally hosted (no hotlinking):
 - Source: [Pexels](https://www.pexels.com/license/) free-use licence, stored as responsive WebP in `assets/img/` (640/1280 widths + `srcset` on cards)
 - Images illustrate sectors generically — they do **not** depict Besago Ventures projects or imply ownership
 - **Logo:** the official Besago Ventures artwork supplied by the brand, hosted locally in `assets/img/` — the header uses the emblem crop, the footer and `og:image` use the full lockup
-- The favicon is an original gold "B" monogram designed for this site — the official logo is too detailed to read at 16 px
+- The favicon is the official Besago Ventures emblem (matching the header mark), generated at 16/32/48 px with rounded corners, a root `favicon.ico` and a 180 px apple-touch icon
 
 ## Running locally
 
@@ -86,12 +87,6 @@ npx serve .
 ```
 
 Then visit <http://localhost:8000>.
-
-## Placeholders to replace before going live
-
-| Placeholder | Where | What to do |
-|---|---|---|
-| Favicon | `<head>` of `index.html` | Designed gold "B" monogram — replace only if the brand ships a dedicated favicon file |
 
 ## Notes
 
