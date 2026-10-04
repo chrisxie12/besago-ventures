@@ -1089,6 +1089,25 @@ h3 {
   box-shadow: var(--shadow-3);
 }
 
+/* Division logo band at the head of each card — photography stays in the media below */
+.work-logo {
+  display: flex;
+  align-items: center;
+  padding: 14px var(--sp-4);
+  background: var(--white);
+}
+
+.work-logo img {
+  height: 72px;
+  width: auto;
+  display: block;
+}
+
+/* Interim main-company mark on cards whose division logo hasn't arrived yet */
+.work-logo--brand img {
+  border-radius: 6px;
+}
+
 .work-media {
   position: relative;
   aspect-ratio: 16 / 10;
