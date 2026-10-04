@@ -391,9 +391,10 @@ h3 {
 }
 
 .logo-mark {
-  width: 34px;
-  height: 34px;
+  height: 38px; /* official emblem — width follows its aspect ratio */
+  width: auto;
   flex: none;
+  border-radius: 7px;
   transition: transform 0.55s var(--spring);
 }
 
@@ -993,8 +994,9 @@ h3 {
 }
 
 .portrait-mark {
-  width: 96px;
   height: 96px;
+  width: auto;
+  border-radius: 10px;
   opacity: 0.9;
 }
 
@@ -1654,6 +1656,23 @@ h3 {
   grid-template-columns: 1.7fr 1fr 1.3fr;
   gap: var(--sp-6);
   padding-bottom: var(--sp-6);
+}
+
+/* Official full-colour logo lockup — the emblem artwork carries its own black tile */
+.footer-logo {
+  display: block;
+}
+
+.footer-logo img {
+  display: block;
+  height: 150px;
+  width: auto;
+  border-radius: 10px;
+  transition: transform 0.55s var(--spring);
+}
+
+.footer-logo:hover img {
+  transform: scale(1.03);
 }
 
 .footer-tagline {

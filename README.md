@@ -35,8 +35,8 @@ besago-ventures/
 │   └── main.js       # Mobile nav, active links, scroll reveals, hero parallax,
 │                     # back-to-top, mailto contact form, footer year
 ├── assets/
-│   ├── logo.svg      # Designed wordmark (reference copy)
-│   └── img/          # Optimised responsive WebP imagery (≈1.6 MB total)
+│   └── img/          # Responsive WebP photography (≈1.6 MB) plus the official
+│                     # logo JPEGs (besago-logo, -640, -emblem-320)
 ├── README.md
 └── .gitignore
 ```
@@ -46,12 +46,12 @@ besago-ventures/
 1. **Hero** — full-screen Accra skyline with dark navy overlay, gold eyebrow "Business • Investment • Opportunity", headline "Connecting Business, Investment & Opportunities", intro line, "Explore Our Businesses" and "Partner With Us" buttons, plus a bottom bar ("Ghana • Africa • Global Opportunities") and scroll cue
 2. **Divisions strip** — 8 quick-nav chips linking to each service card
 3. **About** — editorial "Building Value Through Opportunity." split layout with image, business description, Vision and Mission
-4. **Leadership** — the CEO's published message with an executive signature; a monogram portrait frame awaits the official photograph
+4. **Leadership** — the CEO's published message with an executive signature; the portrait frame shows the official emblem and awaits the official photograph
 5. **What We Do** — 8 numbered, image-led cards: real estate, construction, travel & tourism, import & export, investment facilitation, recruitment, automotive, general trading
 6. **Positioning** — qualitative statements only (Multi-sector, Partnership-led, Growth-oriented); no fabricated metrics
 7. **Partnership** — dark conversion section ("Let's Build Something Valuable.") over an architectural texture, with the partner types Besago Ventures works with
 8. **Contact** — "Let's Talk" split: email, phone/WhatsApp and location rows, WhatsApp button, plus a mailto contact form
-9. **Footer** — brand, short description, Explore / Connect columns and copyright
+9. **Footer** — official logo lockup, tagline, Explore / Connect columns and copyright
 
 A floating **WhatsApp button** is fixed to the bottom-right on every screen size, with a **back-to-top** button above it.
 
@@ -61,7 +61,7 @@ A floating **WhatsApp button** is fixed to the bottom-right on every screen size
 - **Type:** Sora (headings, 500/600/700) + Inter (body, 400/500/600) via Google Fonts, `display=swap`
 - **Layout:** 1280px container, full-width colour-blocked sections, editorial split grids
 - **Motion:** floating navbar drops in on load and tucks away while scrolling down (reveals on scroll up), entrance reveals, slow hero drift/parallax, staggered mobile menu, hover micro-interactions — all disabled under `prefers-reduced-motion`
-- **Icons:** one inline SVG sprite in `index.html` (`<defs>` + `<use>`) using the [Lucide](https://lucide.dev) set (ISC licence) — 24px grid, stroke 2, round caps/joins, `currentColor`. Animated: division icons spring-pop on hover, card/CTA arrows loop across on hover, contact-row icons tilt onto a solid gold tile, eyebrow and stat rules draw in on scroll, WhatsApp button ripples, partner diamonds spin, logo monogram springs — all CSS-only and reduced-motion safe
+- **Icons:** one inline SVG sprite in `index.html` (`<defs>` + `<use>`) using the [Lucide](https://lucide.dev) set (ISC licence) — 24px grid, stroke 2, round caps/joins, `currentColor`. Animated: division icons spring-pop on hover, card/CTA arrows loop across on hover, contact-row icons tilt onto a solid gold tile, eyebrow and stat rules draw in on scroll, WhatsApp button ripples, partner diamonds spin, the logo mark springs on hover — all CSS-only and reduced-motion safe
 - **Accessibility:** WCAG 2.1 AA contrast (verified with Lighthouse 100/100/100 for accessibility, best practices and SEO), visible focus rings, skip link, semantic landmarks, `aria` labels on icon controls
 
 ### Imagery
@@ -70,7 +70,8 @@ Photography is downloaded and locally hosted (no hotlinking):
 
 - Source: [Pexels](https://www.pexels.com/license/) free-use licence, stored as responsive WebP in `assets/img/` (640/1280 widths + `srcset` on cards)
 - Images illustrate sectors generically — they do **not** depict Besago Ventures projects or imply ownership
-- Favicon/logo are original SVG artwork designed for this site
+- **Logo:** the official Besago Ventures artwork supplied by the brand, hosted locally in `assets/img/` — the header and portrait frame use the emblem crop, the footer and `og:image` use the full lockup
+- The favicon is an original gold "B" monogram designed for this site — the official logo is too detailed to read at 16 px
 
 ## Running locally
 
@@ -90,9 +91,8 @@ Then visit <http://localhost:8000>.
 
 | Placeholder | Where | What to do |
 |---|---|---|
-| CEO portrait | Leadership section, monogram portrait frame | Drop in a portrait (4:5 crop) when supplied |
-| Favicon | `<head>` of `index.html` | Designed gold "B" monogram — replace if the brand ships its own favicon |
-| Open Graph | `<head>` of `index.html` | Add `og:url`, `og:image` and canonical URL once a domain exists |
+| CEO portrait | Leadership section portrait frame | Drop in a portrait (4:5 crop) when supplied — the frame currently shows the official emblem |
+| Favicon | `<head>` of `index.html` | Designed gold "B" monogram — replace only if the brand ships a dedicated favicon file |
 
 ## Notes
 
