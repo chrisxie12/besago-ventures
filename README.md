@@ -46,7 +46,7 @@ besago-ventures/
 1. **Hero** — full-screen Accra skyline with dark navy overlay, gold eyebrow "Business • Investment • Opportunity", headline "Connecting Business, Investment & Opportunities", intro line, "Explore Our Businesses" and "Partner With Us" buttons, plus a bottom bar ("Ghana • Africa • Global Opportunities") and scroll cue
 2. **Divisions strip** — 8 quick-nav chips linking to each service card
 3. **About** — editorial "Building Value Through Opportunity." split layout with image, business description, Vision and Mission
-4. **Leadership** — CEO section with a monogram portrait frame and an open message slot (nothing invented)
+4. **Leadership** — the CEO's published message with an executive signature; a monogram portrait frame awaits the official photograph
 5. **What We Do** — 8 numbered, image-led cards: real estate, construction, travel & tourism, import & export, investment facilitation, recruitment, automotive, general trading
 6. **Positioning** — qualitative statements only (Multi-sector, Partnership-led, Growth-oriented); no fabricated metrics
 7. **Partnership** — dark conversion section ("Let's Build Something Valuable.") over an architectural texture, with the partner types Besago Ventures works with
@@ -90,8 +90,7 @@ Then visit <http://localhost:8000>.
 
 | Placeholder | Where | What to do |
 |---|---|---|
-| CEO portrait | Leadership section, monogram portrait frame | Drop in a square portrait when supplied |
-| CEO message | Leadership section, "To be provided" slot | Replace with the CEO's actual message (no quote is invented) |
+| CEO portrait | Leadership section, monogram portrait frame | Drop in a portrait (4:5 crop) when supplied |
 | Favicon | `<head>` of `index.html` | Designed gold "B" monogram — replace if the brand ships its own favicon |
 | Open Graph | `<head>` of `index.html` | Add `og:url`, `og:image` and canonical URL once a domain exists |
 
