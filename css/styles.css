@@ -950,7 +950,7 @@ h3 {
   align-items: center;
 }
 
-/* Large rectangular editorial portrait — ready for the official photograph */
+/* Large rectangular editorial portrait */
 .ceo-portrait {
   position: relative;
   width: min(100%, 440px);
@@ -982,11 +982,14 @@ h3 {
   );
 }
 
-.portrait-mark {
-  height: 96px;
-  width: auto;
-  border-radius: 10px;
-  opacity: 0.9;
+/* The photograph fills the frame; the face sits in the upper third */
+.portrait-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 /* The portrait eases into place as the section reveals */
