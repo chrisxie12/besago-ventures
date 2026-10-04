@@ -192,6 +192,17 @@
             width="1280" height="720"
             alt=""
             fetchpriority="high" decoding="async" />
+          <!-- Background video: sources are attached by main.js, and only for
+               eligible visitors (>900px, no data saver, no reduced motion) -->
+          <video
+            class="hero-video"
+            poster="assets/img/hero-accra-1280.webp"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-hidden="true"></video>
         </div>
         <div class="hero-overlay"></div>
         <svg class="pattern-layer"><rect width="100%" height="100%" fill="url(#besago-pattern)" /></svg>

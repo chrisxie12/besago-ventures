@@ -171,6 +171,49 @@
     );
   }
 
+  /* ---------- Hero background video ----------
+     The <video> element ships without sources. They are attached by script
+     only for visitors on screens wider than 900px, without data saver
+     (navigator.connection.saveData) and without prefers-reduced-motion —
+     everyone else keeps the poster photo and never downloads the files. */
+  const heroVideo = document.querySelector(".hero-video");
+
+  if (heroVideo) {
+    const connection =
+      navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const eligible =
+      window.matchMedia("(min-width: 901px)").matches &&
+      !(connection && connection.saveData) &&
+      !reduceMotion.matches;
+
+    if (eligible) {
+      const fail = () => {
+        // Video unavailable → hide it; the poster photo underneath remains.
+        heroVideo.classList.remove("is-playing");
+        heroVideo.style.display = "none";
+      };
+
+      heroVideo.addEventListener("playing", () => {
+        heroVideo.classList.add("is-playing");
+      });
+      heroVideo.addEventListener("error", fail);
+
+      ["webm", "mp4"].forEach((ext) => {
+        const source = document.createElement("source");
+        source.src = "assets/video/hero." + ext;
+        source.type = "video/" + ext;
+        // The MP4 is the last fallback: its error means both files failed.
+        if (ext === "mp4") source.addEventListener("error", fail);
+        heroVideo.appendChild(source);
+      });
+
+      heroVideo.muted = true;
+      heroVideo.load();
+      const started = heroVideo.play();
+      if (started && typeof started.catch === "function") started.catch(() => {});
+    }
+  }
+
   /* ---------- Back to top ---------- */
   const backBtn = document.getElementById("back-to-top");
 
