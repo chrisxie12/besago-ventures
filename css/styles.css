@@ -458,17 +458,6 @@ h3 {
   animation: header-in 0.65s var(--ease) 0.15s both;
 }
 
-/* Hide while scrolling down; reveal on the way back up */
-.site-header.is-hidden {
-  transform: translate(-50%, calc(-100% - var(--header-top) - 12px));
-  opacity: 0;
-  visibility: hidden; /* leaves the keyboard tab order while hidden */
-  pointer-events: none;
-  transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease),
-    border-color 0.35s var(--ease), transform 0.4s var(--ease),
-    opacity 0.3s ease, visibility 0s linear 0.4s;
-}
-
 .site-header.scrolled {
   background: rgba(7, 26, 43, 0.94);
   border-color: rgba(201, 162, 39, 0.35);
